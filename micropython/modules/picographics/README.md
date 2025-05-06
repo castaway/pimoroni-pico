@@ -158,6 +158,20 @@ i2cbus = PimoroniI2C(4, 5)
 display = PicoGraphics(display=DISPLAY_I2C_OLED_128X128, bus=i2cbus)
 ```
 
+### Custom Sizes
+
+To create an arbitrary-sized PicoGraphics object:
+
+```python
+from pimoroni_i2c import PimoroniI2C
+# NB: that's rotation zero, not rotation oh.
+from picographics import PicoGraphicsCustom, PEN_RGB888, ROTATION_0, BUS_PIO
+
+i2cbus = PimoroniI2C(4, 5)
+
+display = PicoGraphicsCustom(width=192, height=168, bus_type=BUS_PIO, pen_type=PEN_RGB888, rotate=ROTATION_0)
+```
+
 ## Function Reference
 
 ### General
