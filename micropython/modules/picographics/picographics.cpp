@@ -219,6 +219,12 @@ bool get_display_settings(PicoGraphicsDisplay display, int &width, int &height, 
             if(rotate == -1) rotate = (int)Rotation::ROTATE_0;
             if(pen_type == -1) pen_type = PEN_RGB888;
             break;
+        case DISPLAY_INTERSTATE75_576X32:
+            width = 576;
+            height = 32;
+            bus_type = BUS_PIO;
+            if(rotate == -1) rotate = (int)Rotation::ROTATE_0;
+            if(pen_type == -1) pen_type = PEN_RGB888;
         case DISPLAY_INKY_FRAME_7:
             width = 800;
             height = 480;
